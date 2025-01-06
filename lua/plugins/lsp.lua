@@ -29,6 +29,7 @@ return {
                     "python",
                 },
                 highlight = { enable = true },
+                indent = { enable = true },
             })
         end,
     },
@@ -80,6 +81,7 @@ return {
             })
         end,
     },
+    { "sheerun/vim-polyglot" },
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
