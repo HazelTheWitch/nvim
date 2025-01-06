@@ -15,3 +15,6 @@ vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope Help 
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Parent Directory" })
+
+-- Docstrings
+vim.keymap.set("n", "<leader>d", function() require("neogen").generate() end, { desc = "Generate Docstring" })

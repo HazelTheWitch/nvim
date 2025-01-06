@@ -40,4 +40,9 @@ return {
             size = 20,
         },
     },
+
+    {
+        "danymat/neogen",
+        opts = { snippet_engine = "luasnip" },
+    },
 }
