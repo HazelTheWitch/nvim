@@ -13,10 +13,5 @@ vim.keymap.set("n", "<leader>fg", telescope.live_grep, { desc = "Telescope Live 
 vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Telescope Buffers" })
 vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope Help Tags" })
 
--- Signature Help
-vim.keymap.set("n", "<leader>k", function()
-    vim.lsp.buf.signature_help()
-end, { desc = "Show Signature Help" })
-
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Parent Directory" })

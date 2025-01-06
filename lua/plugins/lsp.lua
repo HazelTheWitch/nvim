@@ -29,7 +29,6 @@ return {
                     "python",
                 },
                 highlight = { enable = true },
-                indent = { enable = true },
             })
         end,
     },
