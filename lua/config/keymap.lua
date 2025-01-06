@@ -2,7 +2,7 @@
 local harpoon = require("harpoon")
 
 vim.keymap.set("n", "<leader>q", function()
-	harpoon:list():add()
+    harpoon:list():add()
 end, { desc = "Harpoon Current File" })
 
 -- Telescope
@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Telescope Help 
 
 -- Signature Help
 vim.keymap.set("n", "<leader>k", function()
-	vim.lsp.buf.signature_help()
+    vim.lsp.buf.signature_help()
 end, { desc = "Show Signature Help" })
 
 -- Oil
