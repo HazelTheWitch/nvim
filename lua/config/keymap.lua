@@ -18,3 +18,9 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Parent Directory" })
 
 -- Docstrings
 vim.keymap.set("n", "<leader>d", function() require("neogen").generate() end, { desc = "Generate Docstring" })
+
+-- Tabs
+vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", { desc = "Open a New Tab" })
+vim.keymap.set("n", "<C-S-t>", "<CMD>tabclose<CR>", { desc = "Close Current Tab" })
+vim.keymap.set("n", "<S-h>", "<CMD>tabprev<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<S-l>", "<CMD>tabnext<CR>", { desc = "Previous Tab" })
