@@ -27,6 +27,10 @@ return {
                     "ron",
                     "rust",
                     "python",
+                    "typescript",
+                    "css",
+                    "javascript",
+                    "svelte",
                 },
                 highlight = { enable = true },
                 indent = { enable = true },
@@ -47,6 +51,11 @@ return {
             local servers = {
                 bashls = {},
                 rust_analyzer = {},
+                svelte = {},
+                biome = {},
+                eslint = {},
+                ts_ls = {},
+                tailwindcss = {},
             }
 
             require("lazydev").setup({})
