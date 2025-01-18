@@ -56,6 +56,23 @@ return {
                 eslint = {},
                 ts_ls = {},
                 tailwindcss = {},
+                emmet_ls = {
+                    filetypes = {
+                        "css",
+                        "eruby",
+                        "html",
+                        "javascript",
+                        "javascriptreact",
+                        "less",
+                        "sass",
+                        "typescript",
+                        "scss",
+                        "svelte",
+                        "pug",
+                        "typescriptreact",
+                        "vue",
+                    }
+                }
             }
 
             require("lazydev").setup({})

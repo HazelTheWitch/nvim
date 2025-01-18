@@ -6,6 +6,19 @@ return {
         config = function()
             local ls = require("luasnip")
 
+            local unlinkgrp = vim.api.nvim_create_augroup("UnlinkSnippetOnModeChange", { clear = true })
+
+            vim.api.nvim_create_autocmd("ModeChanged", {
+                group = unlinkgrp,
+                pattern = { "s:n", "i:*" },
+                desc = "Forget the current snippet when leaving insert mode",
+                callback = function(evt)
+                    if ls.session and ls.session.current_nodes[evt.buf] and ls.session.jump_active then
+                        ls.unlink_current()
+                    end
+                end,
+            })
+
             ls.config.set_config({
                 history = true,
                 updateevents = "TextChanged,TextChangedI",
