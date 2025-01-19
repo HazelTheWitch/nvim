@@ -19,6 +19,23 @@ return {
                 end,
             })
 
+            local function uuid()
+                local id, _ = vim.fn.system("uuidgen"):gsub("\n", "")
+                return id
+            end
+
+            ls.add_snippets("all", {
+                ls.snippet({
+                    trig = "uuid",
+                    name = "UUID",
+                    descr = "generate a random UUID"
+                }, {
+                    ls.dynamic_node(1, function()
+                        return ls.snippet_node(nil, ls.insert_node(1, uuid()))
+                    end)
+                })
+            })
+
             ls.config.set_config({
                 history = true,
                 updateevents = "TextChanged,TextChangedI",
