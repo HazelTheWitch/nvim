@@ -24,3 +24,7 @@ end
 vim.keymap.set("n", "<leader>fq", function()
 	toggle_telescope(harpoon:list())
 end, { desc = "Telescope Harpoon" })
+
+for i = 1, 9 do
+	vim.keymap.set("n", "<C-q>" .. i, function() harpoon:list():select(i) end, { desc = "Select Harpooned " .. i })
+end

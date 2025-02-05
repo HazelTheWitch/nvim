@@ -32,16 +32,6 @@ return {
         },
     },
     {
-        "akinsho/toggleterm.nvim",
-        version = "*",
-        opts = {
-            open_mapping = "<C-\\>",
-            direction = "horizontal",
-            size = 20,
-        },
-    },
-
-    {
         "danymat/neogen",
         opts = { snippet_engine = "luasnip" },
     },

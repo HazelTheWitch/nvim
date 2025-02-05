@@ -21,6 +21,6 @@ vim.keymap.set("n", "<leader>d", function() require("neogen").generate() end, { 
 
 -- Tabs
 vim.keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", { desc = "Open a New Tab" })
-vim.keymap.set("n", "<C-S-t>", "<CMD>tabclose<CR>", { desc = "Close Current Tab" })
+vim.keymap.set("n", "<C-x>", "<CMD>tabclose<CR>", { desc = "Close Current Tab" })
 vim.keymap.set("n", "<S-h>", "<CMD>tabprev<CR>", { desc = "Next Tab" })
 vim.keymap.set("n", "<S-l>", "<CMD>tabnext<CR>", { desc = "Previous Tab" })
