@@ -33,7 +33,6 @@ return {
                     "svelte",
                 },
                 highlight = { enable = true },
-                indent = { enable = true },
             })
         end,
     },
