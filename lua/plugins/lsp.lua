@@ -31,6 +31,7 @@ return {
                     "css",
                     "javascript",
                     "svelte",
+                    "wgsl",
                 },
                 highlight = { enable = true },
             })
@@ -55,6 +56,7 @@ return {
                 eslint = {},
                 ts_ls = {},
                 tailwindcss = {},
+                wgsl_analyzer = {},
                 emmet_ls = {
                     filetypes = {
                         "css",
