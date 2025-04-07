@@ -32,6 +32,7 @@ return {
                     "javascript",
                     "svelte",
                     "wgsl",
+                    "zig",
                 },
                 highlight = { enable = true },
             })
@@ -57,6 +58,7 @@ return {
                 ts_ls = {},
                 tailwindcss = {},
                 wgsl_analyzer = {},
+                zls = {},
                 emmet_ls = {
                     filetypes = {
                         "css",
