@@ -9,7 +9,7 @@ return {
         },
     },
     {
-  "luckasRanarison/tailwind-tools.nvim",
+      "luckasRanarison/tailwind-tools.nvim",
         name = "tailwind-tools",
         build = ":UpdateRemotePlugins",
         dependencies = {
@@ -17,7 +17,13 @@ return {
             "nvim-telescope/telescope.nvim",
             "neovim/nvim-lspconfig",
         },
-        opts = {}
+        opts = {
+            extension = {
+                patterns = {
+                    rust = { "class=[\"']([^\"']+)[\"']" },
+                }
+            }
+        }
     },
     {
         "nvim-treesitter/nvim-treesitter",
