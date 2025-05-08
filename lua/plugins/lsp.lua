@@ -50,6 +50,7 @@ return {
                     "svelte",
                     "wgsl",
                     "zig",
+                    "astro",
                 },
                 highlight = { enable = true },
             })
