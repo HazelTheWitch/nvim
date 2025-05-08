@@ -40,6 +40,7 @@ vim.o.shiftwidth = 4
 vim.o.signcolumn = "yes"
 
 -- Filetypes
+vim.g.polyglot_disabled = { "ftdetect" }
 vim.filetype.add({
     extension = {
         astro = "astro"
