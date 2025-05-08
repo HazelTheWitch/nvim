@@ -123,15 +123,15 @@ return {
                 ensure_installed = vim.tbl_keys(servers),
             })
 
-            mason_lspconfig.setup_handlers({
-                function(server)
-                    require("lspconfig")[server].setup({
-                        capabilities = capabilities,
-                        on_attach = on_attach,
-                        settings = servers[server],
-                    })
-                end,
-            })
+            -- mason_lspconfig.setup_handlers({
+            --     function(server)
+            --         require("lspconfig")[server].setup({
+            --             capabilities = capabilities,
+            --             on_attach = on_attach,
+            --             settings = servers[server],
+            --         })
+            --     end,
+            -- })
         end,
     },
     { "sheerun/vim-polyglot" },
