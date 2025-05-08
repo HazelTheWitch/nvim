@@ -73,7 +73,11 @@ return {
                 biome = {},
                 eslint = {},
                 ts_ls = {},
-                tailwindcss = {},
+                tailwindcss = {
+                    includeLanguages = {
+                        rust = "rs"
+                    }
+                },
                 wgsl_analyzer = {},
                 zls = {},
                 emmet_ls = {
