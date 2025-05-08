@@ -74,9 +74,7 @@ return {
                 eslint = {},
                 ts_ls = {},
                 tailwindcss = {
-                    includeLanguages = {
-                        rust = "rs"
-                    }
+                    filetypes = { "rust" }
                 },
                 wgsl_analyzer = {},
                 zls = {},
