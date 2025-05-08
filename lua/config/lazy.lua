@@ -39,6 +39,13 @@ vim.o.shiftwidth = 4
 -- Sign Column Always On
 vim.o.signcolumn = "yes"
 
+-- Filetypes
+vim.filetype.add({
+    extension = {
+        astro = "astro"
+    }
+})
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
