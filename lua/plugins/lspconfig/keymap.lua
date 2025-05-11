@@ -5,13 +5,13 @@ return {
 		local formatting = client.supports_method("textDocument/formatting")
 
 		local mappings = {
-			{ "<LocalLeader>R", lsp.buf.rename, desc = "Rename" },
-			{ "<LocalLeader>S", telescope.lsp_workspace_symbols, desc = "Workspace Symbols" },
-			{ "<LocalLeader>a", lsp.buf.code_action, desc = "Code Action" },
-			{ "<LocalLeader>d", vim.diagnostic.open_float, desc = "Diagnostics" },
-			{ "<LocalLeader>f", lsp.buf.format, desc = "Format", cond = formatting },
-			{ "<LocalLeader>r", telescope.lsp_references, desc = "References" },
-			{ "<LocalLeader>s", telescope.symbols, desc = "Symbols" },
+			{ "<localleader>R", lsp.buf.rename, desc = "Rename" },
+			{ "<localleader>S", telescope.lsp_workspace_symbols, desc = "Workspace Symbols" },
+			{ "<localleader>a", lsp.buf.code_action, desc = "Code Action" },
+			{ "<localleader>d", vim.diagnostic.open_float, desc = "Diagnostics" },
+			{ "<localleader>f", lsp.buf.format, desc = "Format", cond = formatting },
+			{ "<localleader>r", telescope.lsp_references, desc = "References" },
+			{ "<localleader>s", telescope.symbols, desc = "Symbols" },
 			{ "K", lsp.buf.hover, desc = "Hover" },
 			{ "<C-.>", lsp.buf.definition, desc = "Go To Definition" },
 			{ "[d", lsp.diagnostic.goto_prev, desc = "Previous Diganostic" },

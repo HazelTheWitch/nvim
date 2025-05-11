@@ -123,6 +123,18 @@ return {
                 vim.wo.foldlevel = 99
             end
 
+            vim.api.nvim_create_autocmd("LspAttach", {
+                callback = function (event)
+                    local client = vim.lsp.get_client_by_id(event.data.client_id)
+                    if not client then
+                        return
+                    end
+                    for buffer_number, _ in pairs(client.attached_buffers) do
+                        on_attach(client, buffer_number)
+                    end
+                end
+            })
+
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
