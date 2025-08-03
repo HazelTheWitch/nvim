@@ -8,23 +8,23 @@ return {
             },
         },
     },
-    -- {
-    --   "luckasRanarison/tailwind-tools.nvim",
-    --     name = "tailwind-tools",
-    --     build = ":UpdateRemotePlugins",
-    --     dependencies = {
-    --         "nvim-treesitter/nvim-treesitter",
-    --         "nvim-telescope/telescope.nvim",
-    --         "neovim/nvim-lspconfig",
-    --     },
-    --     opts = {
-    --         extension = {
-    --             patterns = {
-    --                 rust = { "class=[\"']([^\"']+)[\"']" },
-    --             }
-    --         }
-    --     }
-    -- },
+    {
+      "luckasRanarison/tailwind-tools.nvim",
+        name = "tailwind-tools",
+        build = ":UpdateRemotePlugins",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-telescope/telescope.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        opts = {
+            extension = {
+                patterns = {
+                    rust = { "class=[\"']([^\"']+)[\"']" },
+                }
+            }
+        }
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -51,10 +51,17 @@ return {
                     "wgsl",
                     "zig",
                     "astro",
+                    "html",
+                    "css",
+                    "tsx",
                 },
                 highlight = { enable = true },
             })
         end,
+    },
+    {
+        "mason-org/mason.nvim",
+        opts = {}
     },
     {
         "neovim/nvim-lspconfig",
@@ -74,14 +81,7 @@ return {
                 biome = {},
                 eslint = {},
                 ts_ls = {},
-                tailwindcss = {
-                    filetypes = { "rust" },
-                    init_options = {
-                        userLanguages = {
-                            rust = "html"
-                        }
-                    }
-                },
+                tailwindcss = {},
                 wgsl_analyzer = {},
                 zls = {},
                 emmet_ls = {
@@ -113,6 +113,7 @@ return {
 
             require("lazydev").setup({})
             require("mason").setup({})
+            require("lspconfig").tailwindcss.setup({})
 
             local function on_attach(client, buffer)
                 require("plugins.lspconfig.keymap").setup(client, buffer)
@@ -153,6 +154,8 @@ return {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-nvim-lsp",
             "saadparwaiz1/cmp_luasnip",
+            "tailwind-tools",
+            "onsails/lspkind-nvim",
         },
         config = function()
             local cmp = require("cmp")
