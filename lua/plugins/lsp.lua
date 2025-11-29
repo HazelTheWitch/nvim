@@ -101,7 +101,6 @@ return {
                         "vue",
                         "astro",
                         "rust",
-                        "rs",
                     }
                 }
             }
@@ -115,7 +114,11 @@ return {
 
             require("lazydev").setup({})
             require("mason").setup({})
-            require("lspconfig").tailwindcss.setup({})
+
+            for server, cfg in pairs(servers) do
+                vim.lsp.enable(server)
+                vim.lsp.config(server, cfg)
+            end
 
             local function on_attach(client, buffer)
                 require("plugins.lspconfig.keymap").setup(client, buffer)
