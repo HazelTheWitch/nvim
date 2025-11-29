@@ -101,6 +101,7 @@ return {
                         "vue",
                         "astro",
                         "rust",
+                        "rs",
                     }
                 }
             }
