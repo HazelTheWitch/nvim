@@ -84,7 +84,7 @@ return {
                 tailwindcss = {},
                 wgsl_analyzer = {},
                 zls = {},
-                emmet_ls = {
+                emmet_language_server = {
                     filetypes = {
                         "css",
                         "eruby",
@@ -100,6 +100,7 @@ return {
                         "typescriptreact",
                         "vue",
                         "astro",
+                        "rust",
                     }
                 }
             }
