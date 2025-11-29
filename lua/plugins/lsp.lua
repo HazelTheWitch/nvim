@@ -114,7 +114,7 @@ return {
 
             require("lazydev").setup({})
             require("mason").setup({})
-            require("lspconfig").tailwindcss.setup({})
+            vim.lsp.config.tailwindcss.setup({})
 
             local function on_attach(client, buffer)
                 require("plugins.lspconfig.keymap").setup(client, buffer)
