@@ -100,7 +100,6 @@ return {
                         "typescriptreact",
                         "vue",
                         "astro",
-                        "rust",
                     }
                 }
             }
