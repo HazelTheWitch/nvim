@@ -9,23 +9,6 @@ return {
         },
     },
     {
-      "luckasRanarison/tailwind-tools.nvim",
-        name = "tailwind-tools",
-        build = ":UpdateRemotePlugins",
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-telescope/telescope.nvim",
-            "neovim/nvim-lspconfig",
-        },
-        opts = {
-            extension = {
-                patterns = {
-                    rust = { "class=[\"']([^\"']+)[\"']" },
-                }
-            }
-        }
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
@@ -158,7 +141,6 @@ return {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-nvim-lsp",
             "saadparwaiz1/cmp_luasnip",
-            "tailwind-tools",
             "onsails/lspkind-nvim",
         },
         config = function()
