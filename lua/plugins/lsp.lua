@@ -9,40 +9,6 @@ return {
         },
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            require("nvim-treesitter.configs").setup({
-                ensure_installed = {
-                    "bash",
-                    "diff",
-                    "gitignore",
-                    "json",
-                    "lua",
-                    "markdown",
-                    "regex",
-                    "sql",
-                    "toml",
-                    "yaml",
-                    "ron",
-                    "rust",
-                    "python",
-                    "typescript",
-                    "css",
-                    "javascript",
-                    "svelte",
-                    "wgsl",
-                    "zig",
-                    "astro",
-                    "html",
-                    "css",
-                    "tsx",
-                },
-                highlight = { enable = true },
-            })
-        end,
-    },
-    {
         "mason-org/mason.nvim",
         opts = {}
     },
