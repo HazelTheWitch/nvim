@@ -25,7 +25,7 @@ return {
         config = function()
             local servers = {
                 bashls = {},
-                rust_analyzer = {},
+                -- rust_analyzer = {},
                 svelte = {},
                 biome = {},
                 eslint = {},
